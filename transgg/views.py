@@ -1,4 +1,6 @@
 from django.http import HttpResponse
 
-def index(request):
-    return HttpResponse("Index page.")
+from django.views.generic import ListView, DetailView
+from .models import Category, Question
+
+# TODO: views

@@ -1,0 +1,6 @@
+.container {
+    display: grid;
+    grid-template-areas: "sidebar main";
+    gap: 1.5rem;
+    grid-template-columns: 1fr 3fr;
+}

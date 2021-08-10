@@ -4,6 +4,8 @@ class Page(models.Model):
     """Represents a non-category/question page on the site"""
     # Name of the page
     name = models.CharField(max_length=48)
+    # Slug (url identifier) field
+    slug = models.SlugField()
     # Contents of the page
     body = models.TextField()
     # Whether the page is visible in navigation
@@ -20,6 +22,8 @@ class Category(models.Model):
     """Represents a category that questions can belong to"""
     # Title of category
     title = models.CharField(max_length=32)
+    # Slug (url identifier) field
+    slug = models.SlugField()
     # (Optional) short description of category
     description = models.TextField(blank=True)
     # Whether category and its questions are visible
@@ -37,6 +41,8 @@ class Question(models.Model):
     """Represents a question with an answer on a specific topic"""
     # Question
     title = models.CharField(max_length=56)
+    # Slug (url identifier) field
+    slug = models.SlugField()
     # Basic answer
     answer = models.TextField()
     # (Optional) long-form answer for more in-depth questions
