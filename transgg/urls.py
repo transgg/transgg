@@ -19,7 +19,7 @@ from django.urls import path
 from django.views.generic import TemplateView
 
 urlpatterns = [
-    path('', TemplateView.as_view(template_name='template.html'), name='index'),
-    # TODO: views for pages, categories (questions)
+    path('', TemplateView.as_view(template_name="template.html"), name="index"),
+    path('page/<slug:slug>', TemplateView.as_view(template_name="template.html"), name="index"),
     path('admin/', admin.site.urls),
 ]
